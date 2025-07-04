@@ -21,3 +21,7 @@ def get_numbers_ticket(min_num: int, max_num: int, quantity: int) -> list[int]:
 
     # Сортуємо та повертаємо список
     return sorted(numbers)
+
+if __name__ == "__main__":
+    result = get_numbers_ticket(1, 49, 6)
+    print(f"Ваш лотерейний квиток: {result}")

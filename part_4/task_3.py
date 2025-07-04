@@ -24,3 +24,9 @@ def normalize_phone(phone_number: str) -> str:
             phone = '+38' + phone
 
     return phone
+
+
+if __name__ == "__main__":
+    phone_input = input("Введіть номер телефону у довільному форматі: ")
+    normalized = normalize_phone(phone_input)
+    print(f"Нормалізований номер: {normalized}")

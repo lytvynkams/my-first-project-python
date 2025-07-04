@@ -34,3 +34,15 @@ def get_cats_info(path):
     except Exception as e:
         print(f"Виникла помилка при обробці файлу: {e}")
         return []
+
+
+
+if __name__ == "__main__":
+    path = input("Введіть шлях до файлу з інформацією про котів: ").strip()
+    cats = get_cats_info(path)
+    if cats:
+        print("Інформація про котів:")
+        for cat in cats:
+            print(f"ID: {cat['id']}, Ім'я: {cat['name']}, Вік: {cat['age']}")
+    else:
+        print("Немає даних або файл не знайдено.")

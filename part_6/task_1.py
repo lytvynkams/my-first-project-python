@@ -41,3 +41,11 @@ def total_salary(path):
     except Exception as e:
         print(f"Виникла помилка при обробці файлу: {e}")
         return (0, 0)
+
+
+
+if __name__ == "__main__":
+    path = "salaries.txt"  # переконайтесь, що файл існує в цій же папці
+    total, average = total_salary(path)
+    print(f"Загальна зарплата: {total}")
+    print(f"Середня зарплата: {average}")

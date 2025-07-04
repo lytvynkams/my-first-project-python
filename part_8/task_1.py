@@ -17,3 +17,10 @@ def caching_fibonacci():
         return cache[n]
 
     return fibonacci
+
+
+
+if __name__ == "__main__":
+    fib = caching_fibonacci()
+    n = 10  # приклад: обчислити 10-е число Фібоначчі
+    print(f"Fibonacci({n}) = {fib(n)}")

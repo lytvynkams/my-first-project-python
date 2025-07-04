@@ -41,3 +41,24 @@ def get_upcoming_birthdays(users):
             })
 
     return upcoming
+
+
+
+if __name__ == "__main__":
+    users = [
+        {"name": "Олена", "birthday": "1995.07.04"},
+        {"name": "Іван", "birthday": "1988.07.06"},
+        {"name": "Марія", "birthday": "1992.07.07"},
+        {"name": "Андрій", "birthday": "1990.07.08"},
+        {"name": "Світлана", "birthday": "1985.07.13"},
+        {"name": "Петро", "birthday": "1999.12.31"},
+    ]
+
+    result = get_upcoming_birthdays(users)
+
+    if result:
+        print("✅ Найближчі вітання:")
+        for user in result:
+            print(f"{user['name']} — {user['congratulation_date']}")
+    else:
+        print("Найближчих днів народження немає ☹️")
